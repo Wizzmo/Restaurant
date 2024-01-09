@@ -13,6 +13,7 @@
 		9861586A2B4DA6A000D406A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986158682B4DA6A000D406A5 /* Main.storyboard */; };
 		9861586C2B4DA6A100D406A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9861586B2B4DA6A100D406A5 /* Assets.xcassets */; };
 		9861586F2B4DA6A100D406A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9861586D2B4DA6A100D406A5 /* LaunchScreen.storyboard */; };
+		986158772B4DA76B00D406A5 /* KitchenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986158762B4DA76B00D406A5 /* KitchenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9861586B2B4DA6A100D406A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9861586E2B4DA6A100D406A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		986158702B4DA6A100D406A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		986158762B4DA76B00D406A5 /* KitchenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				986158622B4DA6A000D406A5 /* AppDelegate.swift */,
 				986158642B4DA6A000D406A5 /* SceneDelegate.swift */,
 				986158662B4DA6A000D406A5 /* ClientViewController.swift */,
+				986158762B4DA76B00D406A5 /* KitchenViewController.swift */,
 				986158682B4DA6A000D406A5 /* Main.storyboard */,
 				9861586B2B4DA6A100D406A5 /* Assets.xcassets */,
 				9861586D2B4DA6A100D406A5 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				986158672B4DA6A000D406A5 /* ClientViewController.swift in Sources */,
 				986158632B4DA6A000D406A5 /* AppDelegate.swift in Sources */,
 				986158652B4DA6A000D406A5 /* SceneDelegate.swift in Sources */,
+				986158772B4DA76B00D406A5 /* KitchenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

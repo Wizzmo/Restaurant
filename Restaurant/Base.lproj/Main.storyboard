@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,16 +11,73 @@
         <!--Client View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ClientViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ClientViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хочу есть!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRB-xj-Rs6">
+                                <rect key="frame" x="121.5" y="60" width="132" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2g-T6-rgX">
+                                <rect key="frame" x="118" y="427" width="139" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сделать заказ"/>
+                                <connections>
+                                    <action selector="clientActionButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zrm-EA-27U"/>
+                                    <segue destination="6w8-yG-tfp" kind="presentation" identifier="openKitchenVC" id="Auy-df-6Aj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fRB-xj-Rs6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XSu-rb-3Vg"/>
+                            <constraint firstItem="fRB-xj-Rs6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="idd-nF-irX"/>
+                            <constraint firstItem="p2g-T6-rgX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kg0-A7-YMi"/>
+                            <constraint firstItem="p2g-T6-rgX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="4:3" id="tao-Hg-7DP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clientActionButton" destination="p2g-T6-rgX" id="GYo-mo-Amq"/>
+                        <outlet property="clientStatusLabel" destination="fRB-xj-Rs6" id="nww-ST-koI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="59" y="4"/>
+        </scene>
+        <!--Kitchen View Controller-->
+        <scene sceneID="2PT-Ou-5eI">
+            <objects>
+                <viewController id="6w8-yG-tfp" customClass="KitchenViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vv7-9K-KuV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZk-ZZ-F2U">
+                                <rect key="frame" x="107.5" y="306" width="160" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Выполнить заказ"/>
+                                <connections>
+                                    <action selector="completeOrderButtonPressed" destination="6w8-yG-tfp" eventType="touchUpInside" id="Rdw-j1-Fxe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dhy-WU-j7I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cZk-ZZ-F2U" firstAttribute="centerY" secondItem="vv7-9K-KuV" secondAttribute="centerY" id="LbE-gf-WC6"/>
+                            <constraint firstItem="cZk-ZZ-F2U" firstAttribute="centerX" secondItem="vv7-9K-KuV" secondAttribute="centerX" id="aDT-we-WLO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ys-yb-f3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="3"/>
         </scene>
     </scenes>
     <resources>
